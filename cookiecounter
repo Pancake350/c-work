@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class CookieCalorieCounter
+{
+    public static void main(String[] args)
+    {
+        Scanner keyboard= new Scanner(System.in);
+        int x;
+        int cal;
+        int calIntake;
+        System.out.print("Enter number of cookies eaten: ");
+        x = keyboard.nextInt();
+        cal=300/(40/10);
+        calIntake=cal*x;
+        System.out.print("Your calorie intake was: "+calIntake+" calories.");
+        
+    }
+
+}

@@ -1,0 +1,47 @@
+#include <iostream>;
+using namespace std;
+
+
+bool checkWin(int ticket[], int size, int num);
+
+const int ticketnum = 10;
+int main()
+{	
+	int list[ticketnum] = { 13579 ,26791 ,26792, 33445, 55555,62483 ,77777, 79422, 85647, 93121 };
+	
+	int response;
+  bool result;
+  
+	cout << "Enter·this·week's·5-digit·winning·lottery·number:";
+	cin >> response;
+	cout << "\n";
+
+	result = checkWin(list, ticketnum, response);
+  
+	if (result == true)
+	{
+		cout << "You·did·not·win·this·week." << "\n";
+	}
+	else 
+  {
+		cout << "You won." << "/n";
+	}
+  }
+
+	
+
+bool checkWin(int ticket[],int size, int num)
+{
+	int position = -1;
+	int index = 0;
+	bool found = false;
+	while (index < size && !found)
+	{
+		if (ticket[index] == num)
+		{
+			found = true;
+		}
+		index++;
+	}
+	return found;
+}

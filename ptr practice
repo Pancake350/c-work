@@ -1,0 +1,22 @@
+The variables arr1 and arr2 have been declared as pointers to integers.
+
+An array of 10 elements has been allocated,
+its pointer assigned to arr1, and
+the elements initialized to some values.
+
+Allocate an array of 20 elements,
+assign its pointer to arr2,
+copy the 10 elements from arr1 to the first 10 elements of arr2, and
+initialize the remainder of the elements of arr2 to 0.
+
+
+
+arr2=new int[20];
+for(int i=0;i<10;i++)
+{
+    arr2[i]=arr1[i];
+}
+for(int i=10;i<20;i++)
+{
+    arr2[i]=0;
+}
